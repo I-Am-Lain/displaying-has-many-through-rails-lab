@@ -1,0 +1,15 @@
+<h1> THE APPOINTMENT SHOW PAGE </h1>
+
+<b><%= link_to @appointment.patient.name, patient_path(@appointment.patient) %></b>
+
+<br>
+
+has an appointment for <b><%= @appointment.doctor.department %></b>
+
+<br>
+
+with <b><%= link_to @appointment.doctor.name, doctor_path(@appointment.doctor) %></b> 
+
+<br> 
+
+at <b><%= @appointment.appointment_time%></b>

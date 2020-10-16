@@ -1,0 +1,19 @@
+<h1> THE DOCTOR#SHOW PAGE </h1>
+
+<br>
+
+<h2><%= @doctor.name %></h2>
+
+<h3>Department of <%= @doctor.department %></h3>
+
+
+<p><b>--------------------</b></p>
+<h4>Appointments</h4>
+<ul>
+    <% @doctor.appointments.each do |a| %>
+        <li> <%= a.appointment_time %> </li> <br>
+        <li> <%= link_to a.patient.name, patient_path(a.patient) %></li> 
+        <br><br><br>
+    <% end %>
+</ul>
+<b>---</b>

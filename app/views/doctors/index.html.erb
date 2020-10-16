@@ -1,0 +1,6 @@
+<% @doctors.each do |d| %>
+    <%= link_to d.name, doctor_path(d) %> 
+    <br>
+    <%= d.department %>
+    <br><br>
+<% end %>
